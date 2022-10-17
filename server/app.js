@@ -5,8 +5,14 @@ const fs = require("fs")
 //Aplicacion
 const app = express()
 
-//Route imports
+/* 
+------------------------------------------
+            IMPORTE DE RUTAS
+------------------------------------------
+*/
 const upload = require("./src/routes/upload")
+const apiFiles = require("./src/routes/apiFiles")
+const apiFilesDir = require("./src/routes/apiFilesDir")
 
 //Settings
 app.set("port", 3000)
@@ -14,9 +20,14 @@ app.set("port", 3000)
 //Development dependencie
 app.use(morgan("dev"))
 
-//Routes
+/* 
+------------------------------------------
+        RUTAS BASE Y MIDDLEWARES
+------------------------------------------
+*/
+
 app.get("/", (req, res) => {
-  res.send("Ok")
+  res.redirect("/upload")
 })
 
 app.get("/upload", (req, res) => {
@@ -25,26 +36,33 @@ app.get("/upload", (req, res) => {
   })
 })
 
-//Api routes
-app.get("/api/files", (req, res) => {
-  fs.readdir(
-    __dirname + "/storage/upload",
-    { withFileTypes: true },
-    (err, files) => {
-      err ? res.json({ message: "Directory not found" }) : res.json(files)
-    }
-  )
-})
+/* 
+------------------------------------------
+      MODULOS QUE USAN METODO GET
+------------------------------------------
+*/
 
-app.get("/api/files/:dir", (req, res) => {
-  let dirSearch = __dirname + `/storage/upload/${req.params.dir}`
-  fs.readdir(dirSearch, { withFileTypes: true }, (err, files) => {
-    err ? res.json({ message: "Directory not found" }) : res.json(files)
-  })
-})
+//"/upload/files/:dir"
+app.use(apiFilesDir)
 
+// "/upload/files"
+app.use(apiFiles)
+
+/* 
+  ------------------------------------------
+        MODULOS QUE USAN METODO GET
+  ------------------------------------------
+*/
+
+//Api upload
 app.use(upload)
 
-//Server run and information
-app.listen(app.get("port"))
-console.log(`Server on port ${app.get("port")}`)
+/* 
+  ------------------------------------------
+                SERVER RUN 
+  ------------------------------------------
+*/
+
+app.listen(app.get("port"), () =>
+  console.log(`Server on port ${app.get("port")}`)
+)
