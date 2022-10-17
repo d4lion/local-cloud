@@ -1,0 +1,6 @@
+#Editor files
+.vscode
+.eslintrc.json
+
+#Node modules
+node_modules
