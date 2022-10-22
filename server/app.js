@@ -1,4 +1,5 @@
 const express = require("express")
+const cors = require("cors")
 const morgan = require("morgan")
 const fs = require("fs")
 
@@ -7,7 +8,7 @@ const app = express()
 
 /* 
 ------------------------------------------
-            IMPORTE DE RUTAS
+IMPORTE DE RUTAS
 ------------------------------------------
 */
 const upload = require("./src/routes/upload")
@@ -16,6 +17,9 @@ const apiFilesDir = require("./src/routes/apiFilesDir")
 
 //Settings
 app.set("port", 3000)
+
+//CORS
+app.use(cors()) //Todos los origenes
 
 //Development dependencie
 app.use(morgan("dev"))
@@ -50,7 +54,7 @@ app.use(apiFiles)
 
 /* 
   ------------------------------------------
-        MODULOS QUE USAN METODO GET
+        MODULOS QUE USAN METODO POST
   ------------------------------------------
 */
 
