@@ -1,6 +1,6 @@
 {
   "name": "local-cloud",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Local cloud for save, view and change any file in the local network",
   "main": "index.js",
   "scripts": {
