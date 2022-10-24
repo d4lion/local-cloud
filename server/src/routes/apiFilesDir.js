@@ -7,9 +7,7 @@ const router = Router()
 router.get("/upload/files/:dir", (req, res) => {
   let dirSearch = cwd() + `/server/upload/${req.params.dir}`
   fs.readdir(dirSearch, { withFileTypes: true }, (err, file) => {
-    err
-      ? res.json({ message: "Directory not found" })
-      : res.json({ files: file })
+    err ? res.json({ message: "Directory not found" }) : res.json(file)
   })
 })
 
