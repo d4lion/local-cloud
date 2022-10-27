@@ -10,19 +10,23 @@ const FilesPage = () => {
         {dirname} Files
       </h1>
 
-      <div className="grid px-2 sm:grid-cols-2 gap-2 sm:px-40">
+      <div className="grid px-2 sm:grid-cols-2 gap-3 sm:px-40">
         <FilesButton />
       </div>
-      <footer className="flex py-16 justify-evenly items-center">
-        <NavLink
-          to="/directory"
-          className="bg-slate-500 hover:bg-slate-400 text-white font-bold py-2 px-8 border-b-4 border-slate-700 hover:border-slate-500 rounded"
-        >
-          Atras
-        </NavLink>
 
-        <UploadFile />
-      </footer>
+      <div className="sm:m-0 sm:flex px-5 py-10 justify-around items-center">
+        <div className="py-10 sm:py-0">
+          <NavLink
+            to="/directory"
+            className="bg-slate-500 hover:bg-slate-400 text-white font-bold py-2 px-8 border-b-4 border-slate-700 hover:border-slate-500 rounded"
+          >
+            Atras
+          </NavLink>
+        </div>
+        <div>
+          <UploadFile />
+        </div>
+      </div>
     </div>
   )
 }
