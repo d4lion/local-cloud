@@ -4,14 +4,55 @@ This repository seeks to create an api that helps to communicate the frontend of
 
 ![local-cloud-storage](https://user-images.githubusercontent.com/111100025/196284100-f41582b0-c833-42bd-830c-41e6ea874b1c.png)
 
-## How to clone
-### To install all dependencies you need to execute
-```
-npm install
+
+# Development Setup
+Clone the repo and cd into the project
+
+```cmd
+git clone https://github.com/daliondev/local-cloud-storage.git
+cd local cloud
 ```
 
-### To deploy the development use
+## Local SetUp
+Install all dependencies to development
+
+```cmd
+cd .\client\ # ./client on linux
+npm i
 ```
+
+```cmd
+cd .\server\ # ./server on linux
+npm i
+```
+
+
+Create upload dir
+```cmd
+cd .\server\ # ./server on linux
+mkdir upload
+```
+
+```cmd
+├───src
+│   └───routes
+├───upload
+└───views
+```
+
+# Local use
+
+### Run fronted
+```cmd
+cd .\client\ # ./client on linux
 npm run dev
 ```
-If you are wanting to create orview commands open the package.json
+
+### Run backend (api)
+
+```cmd
+cd .\server\ # ./server on linux
+npm run dev
+```
+
+
