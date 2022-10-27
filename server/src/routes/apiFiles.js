@@ -8,7 +8,7 @@ router.get("/upload/directory", (req, res) => {
     cwd() + "/server/upload",
     { withFileTypes: true },
     (err, files) => {
-      err ? res.json({ message: "Directory not found" }) : res.send(files)
+      err ? res.json({ message: "Directory not found" }) : res.json(files)
     }
   )
 })

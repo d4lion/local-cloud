@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom"
 import { useState, Component } from "react"
 import axios from "axios"
+import { url as urlPost } from "../../../constants/urls"
 
 const UploadFile = () => {
   const { dirname } = useParams()
-  const url = `http://localhost:3000/upload/${dirname}`
+  const url = `http://${urlPost.url}:${urlPost.port}/upload/${dirname}`
 
   const [files, setFiles] = useState(null)
 

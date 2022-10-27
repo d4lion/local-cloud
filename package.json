@@ -4,7 +4,8 @@
   "description": "Local cloud for save, view and change any file in the local network",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./server/app.js"
+    "dev": "nodemon ./server/app.js",
+    "start": "node ./server/app.js"
   },
   "keywords": [],
   "author": "daliondev",
