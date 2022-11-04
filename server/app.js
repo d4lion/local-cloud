@@ -14,6 +14,7 @@ IMPORTE DE RUTAS
 const upload = require("./src/routes/upload")
 const apiFiles = require("./src/routes/apiFiles")
 const apiFilesDir = require("./src/routes/apiFilesDir")
+const delFile = require("./src/routes/delFile")
 
 //Settings
 app.set("port", 3000)
@@ -60,6 +61,13 @@ app.use(apiFiles)
 
 //Api upload
 app.use(upload)
+
+/* 
+  ------------------------------------------
+        MODULOS QUE USAN METODO DEL
+  ------------------------------------------
+*/
+app.use(delFile)
 
 /* 
   ------------------------------------------
