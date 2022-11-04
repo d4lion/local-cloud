@@ -19,7 +19,9 @@ const UploadFile = () => {
       f.append("file", files[index])
     }
 
-    await axios.post(url, f)
+    await axios.post(url, f).then(() => {
+      window.location.reload()
+    })
   }
 
   return (
