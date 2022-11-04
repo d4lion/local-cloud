@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { AiOutlineFolder } from "react-icons/ai"
+import { url } from "../../../constants/urls"
 
 const DirectoryButton = () => {
   const [dir, setDir] = useState([])
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("http://localhost:3000/upload/directory")
+      const response = await fetch(
+        `http://${url.url}:${url.port}/upload/directory`
+      )
       const data = await response.json()
       setDir(data)
     }
