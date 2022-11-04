@@ -5,7 +5,7 @@ import { useParams, NavLink } from "react-router-dom"
 const FilesPage = () => {
   const { dirname } = useParams()
   return (
-    <div className="bg-gray-900">
+    <div className="bg-[#1c212e]">
       <h1 className="text-center text-white font-bold py-16 text-4xl uppercase justify-self-center">
         {dirname} Files
       </h1>

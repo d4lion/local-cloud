@@ -5,7 +5,7 @@ import FilesPage from "./pages/Files/Files"
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-gray-900 h-screen">
+      <div className="bg-[#1c212e] h-screen">
         <Routes>
           <Route path="/directory" element={<DirectoriesPage />} />
 
