@@ -7,7 +7,7 @@ function App() {
     <BrowserRouter>
       <div className="bg-[#1c212e] h-screen">
         <Routes>
-          <Route path="/directory" element={<DirectoriesPage />} />
+          <Route path="/" element={<DirectoriesPage />} />
 
           <Route path="/directory/:dirname" element={<FilesPage />} />
         </Routes>

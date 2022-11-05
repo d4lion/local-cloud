@@ -22,7 +22,7 @@ const DirectoryButton = () => {
       {dir.map((dir) => {
         return (
           <Link
-            to={dir.name}
+            to={`/directory/${dir.name}`}
             key={dir.name}
             className="flex justify-center   bg-slate-700 hover:bg-slate-500 p-4 rounded-md text-slate-200 "
           >

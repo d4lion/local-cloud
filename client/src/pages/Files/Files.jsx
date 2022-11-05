@@ -17,7 +17,7 @@ const FilesPage = () => {
       <div className="sm:m-0 sm:flex px-5 py-10 justify-around items-center">
         <div className="py-10 sm:py-0">
           <NavLink
-            to="/directory"
+            to="/"
             className="bg-slate-500 hover:bg-slate-400 text-white font-bold py-2 px-8 border-b-4 border-slate-700 hover:border-slate-500 rounded"
           >
             Atras
