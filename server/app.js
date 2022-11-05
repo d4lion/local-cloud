@@ -15,6 +15,7 @@ const upload = require("./src/routes/upload")
 const apiFiles = require("./src/routes/apiDir")
 const apiFilesDir = require("./src/routes/apiFilesDir")
 const delFile = require("./src/routes/delFile")
+const createDir = require("./src/routes/createDir")
 
 //Settings
 app.set("port", 3000)
@@ -68,6 +69,14 @@ app.use(upload)
   ------------------------------------------
 */
 app.use(delFile)
+
+/* 
+  ------------------------------------------
+        MODULOS QUE USAN METODO PUT
+  ------------------------------------------
+*/
+
+app.use(createDir)
 
 /* 
   ------------------------------------------
