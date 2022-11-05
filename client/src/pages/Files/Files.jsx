@@ -1,6 +1,7 @@
 import FilesButton from "./components/FilesButton"
 import UploadFile from "./components/UploadFile"
-import { useParams, NavLink } from "react-router-dom"
+import BackButton from "./components/BackButton"
+import { useParams } from "react-router-dom"
 
 const FilesPage = () => {
   const { dirname } = useParams()
@@ -15,14 +16,7 @@ const FilesPage = () => {
       </div>
 
       <div className="sm:m-0 sm:flex px-5 py-10 justify-around items-center">
-        <div className="py-10 sm:py-0">
-          <NavLink
-            to="/"
-            className="bg-slate-500 hover:bg-slate-400 text-white font-bold py-2 px-8 border-b-4 border-slate-700 hover:border-slate-500 rounded"
-          >
-            Atras
-          </NavLink>
-        </div>
+        <BackButton />
         <div>
           <UploadFile />
         </div>
