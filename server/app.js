@@ -12,7 +12,7 @@ IMPORTE DE RUTAS
 ------------------------------------------
 */
 const upload = require("./src/routes/upload")
-const apiFiles = require("./src/routes/apiFiles")
+const apiFiles = require("./src/routes/apiDir")
 const apiFilesDir = require("./src/routes/apiFilesDir")
 const delFile = require("./src/routes/delFile")
 
