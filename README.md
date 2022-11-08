@@ -55,4 +55,6 @@ cd .\server\ # ./server on linux
 npm run dev
 ```
 
+# View
+[local cloud storage.webm](https://user-images.githubusercontent.com/111100025/200468167-36067666-b45c-4c8f-a08f-b4c856e2f41d.webm)
 
