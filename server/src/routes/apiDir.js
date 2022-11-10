@@ -5,7 +5,7 @@ const { cwd } = require("process")
 
 router.get("/upload/directory", (req, res) => {
   fs.readdir(
-    cwd() + "/server/upload",
+    cwd() + "/server/public/upload",
     { withFileTypes: true },
     (err, files) => {
       err ? res.json({ message: "Directory not found" }) : res.json(files)

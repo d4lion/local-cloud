@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
         err ? err : ""
       })
     }
-    cb(null, `./server${req.url}`)
+    cb(null, `./server/public${req.url}`)
   },
   filename: (req, file, cb) => {
     cb(null, file.originalname)
@@ -25,8 +25,7 @@ const upload = multer({ storage: storage })
 
 //Route
 router.post("/upload/:destination", upload.array("file"), (req, res) => {
-  console.log(req.url)
-  res.json({ status: "ok" })
+  res.status(204).end()
 })
 
 module.exports = router

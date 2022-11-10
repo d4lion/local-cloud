@@ -32,7 +32,14 @@ const FilesButton = () => {
             <div className="ml-4">
               <AiOutlineFile />
             </div>
-            <div className="m-auto">
+            <div
+              className="m-auto"
+              onClick={() =>
+                window.open(
+                  `http://${url.url}:${url.port}/${dirname}/${file.name}`
+                )
+              }
+            >
               <div className="">{file.name}</div>
             </div>
 
