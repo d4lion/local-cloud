@@ -5,7 +5,7 @@ const router = Router()
 
 router.delete("/del/:dir/:file", (req, res) => {
   const fileDeleteRoute =
-    cwd() + `/server/upload/${req.params.dir}/${req.params.file}`
+    cwd() + `/server/public/upload/${req.params.dir}/${req.params.file}`
   if (fs.existsSync(`${fileDeleteRoute}`)) {
     fs.unlinkSync(fileDeleteRoute)
     res.status(200).json({ file: `${req.params.file}` })

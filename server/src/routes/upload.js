@@ -7,9 +7,9 @@ const fs = require("fs")
 //Storage
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    if (!fs.existsSync(`./server/${req.url}`)) {
+    if (!fs.existsSync(`./server/public/${req.url}`)) {
       //Se comprueba si el directorio existe de no existir se crea
-      fs.mkdir(`./server${req.url}`, (err) => {
+      fs.mkdir(`./server/public/${req.url}`, (err) => {
         err ? err : ""
       })
     }

@@ -32,6 +32,8 @@ app.use(morgan("dev"))
 ------------------------------------------
 */
 
+app.use(express.static(__dirname + "/public/upload"))
+
 app.get("/", (req, res) => {
   res.redirect("/upload")
 })
