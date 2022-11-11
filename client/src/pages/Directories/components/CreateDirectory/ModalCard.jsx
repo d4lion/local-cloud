@@ -12,7 +12,7 @@ export default function ModalCard({ visible, onClose }) {
   } else {
     return (
       <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex items-center justify-center">
-        <div className="bg-white p-6 rounded w-72">
+        <form className="bg-white p-6 rounded w-72">
           <div className="flex flex-col mb-7">
             <button className="items-start self-end" onClick={onClose}>
               <AiOutlineClose />
@@ -29,17 +29,18 @@ export default function ModalCard({ visible, onClose }) {
               className="border border-gray-700 p-2 rounded mb-5"
               placeholder="docs"
               onChange={(e) => setDirCreationName(e.target.value)}
+              required
             />
           </div>
-          <div
-            className="text-center"
-            onClick={() => CreateDirectoryReq(dirCreationName)}
-          >
-            <button className="px-5 py-2 bg-gray-700 text-white rounded">
+          <div className="text-center">
+            <button
+              className="px-5 py-2 bg-gray-700 text-white rounded"
+              onClick={() => CreateDirectoryReq(dirCreationName)}
+            >
               Create
             </button>
           </div>
-        </div>
+        </form>
       </div>
     )
   }
