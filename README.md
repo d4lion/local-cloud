@@ -30,13 +30,20 @@ npm i
 Create upload dir
 ```cmd
 cd .\server\ # ./server on linux
-mkdir upload
+mkdir public
 ```
 
 ```cmd
+cd .\public\
+mkdir upload
+```
+
+
+```cmd
+├───public
+│   └───upload
 ├───src
 │   └───routes
-├───upload
 └───views
 ```
 
