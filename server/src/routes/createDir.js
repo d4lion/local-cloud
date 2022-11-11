@@ -10,11 +10,11 @@ router.put("/create/dir/:dir", (req, res) => {
       if (err) {
         res.status(500).send(err)
       } else {
-        res.status(200).json({ exist: false, name: req.params.dir })
+        res.status(200)
       }
     })
   } else {
-    res.status(200).json({ exist: true })
+    res.status(200)
   }
 })
 

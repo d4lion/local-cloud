@@ -12,7 +12,7 @@ const CreateDirectory = () => {
   return (
     <>
       <button
-        className="flex justify-center   bg-slate-700 hover:bg-slate-500 p-4 rounded-md text-slate-200"
+        className="flex justify-center  bg-slate-700 hover:bg-slate-500 p-4 rounded-md text-slate-200"
         onClick={() => {
           setShowModal(true)
         }}
