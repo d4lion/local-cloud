@@ -34,7 +34,8 @@ export default function ModalCard({ visible, onClose }) {
           </div>
           <div className="text-center">
             <button
-              className="px-5 py-2 bg-gray-700 text-white rounded"
+              className="px-6
+               py-4 bg-gray-700 text-white rounded  "
               onClick={() => CreateDirectoryReq(dirCreationName)}
             >
               Create

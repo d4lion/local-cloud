@@ -25,7 +25,7 @@ const UploadFile = () => {
   }
 
   return (
-    <div className=" flex items-center text-white ">
+    <div className="sm:flex sm:items-center text-white overflow-hidden text-center">
       <input
         type="file"
         name="file"
@@ -34,7 +34,7 @@ const UploadFile = () => {
         className="file:bg-slate-500 file:text-white file:py-2 file:rounded-lg file:hover:bg-slate-400 mr-4"
       />
       <button
-        className="bg-slate-500 hover:bg-slate-400 text-white font-bold py-2 px-6 border-b-4 border-slate-700 hover:border-slate-500 rounded"
+        className="bg-slate-500 hover:bg-slate-400 text-white font-bold py-2 px-6 border-b-4 border-slate-700 hover:border-slate-500 rounded sm:mt-0 mt-6"
         onClick={() => sendData()}
       >
         Subir
