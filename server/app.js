@@ -34,15 +34,14 @@ app.use(morgan("dev"))
 
 app.use(express.static(__dirname + "/public/upload"))
 
-app.get("/", (req, res) => {
-  res.redirect("/upload")
-})
-
+//Test upload
+/*
 app.get("/upload", (req, res) => {
   res.sendFile("./views/index.html", {
     root: __dirname,
   })
 })
+*/
 
 /* 
 ------------------------------------------
@@ -85,6 +84,10 @@ app.use(createDir)
                 SERVER RUN 
   ------------------------------------------
 */
+
+app.use((req, res) => {
+  res.status(423).send("Locked")
+})
 
 app.listen(app.get("port"), () =>
   console.log(`Server on port ${app.get("port")}`)
